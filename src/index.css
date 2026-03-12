@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* 1. Blob Animation (Ghoomte hue background shapes) */
+  --animate-blob: blob 7s infinite;
+  
+  /* 2. Smooth Entry Animation (Elements dheere se upar aayenge) */
+  --animate-in: in 0.2s ease-out;
+
+  /* Keyframes (Animation kaise chalegi) */
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+
+  @keyframes in {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* 3. Smooth Scrolling (Poori website ke liye) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4. Custom Scrollbar (Browser ka side bar sundar dikhega) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
